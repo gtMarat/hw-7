@@ -44,13 +44,11 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         int population = 12_000_000;
-        double birthRate = 0.017;
-        double mortality = 0.008;
-        int year = 1;
-        for (year = 1; year <= 10; year++) {
-            population = (int) (population * (birthRate - mortality) + population);
+        // сократил формулу из рождаемости вычел смертность
+        for (int i = 0; i < 10; ++i) {
+            population +=population/1000*9;
             {
-                System.out.println(year + " год ,численность населения составляет " + population + " человек");
+                System.out.println(i+1 + " год ,численность населения составляет " + population + " человек");
             }
         }
     }
